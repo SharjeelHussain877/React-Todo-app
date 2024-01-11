@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Poppins&display=swap');
+/* 
+font-family: 'Nunito', sans-serif;
+font-family: 'Poppins', sans-serif; 
+*/
+.head {
+    color: #a8a8a8;
+}
+.main {
+    font-family: 'Poppins', sans-serif;
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.main form {
+    position: relative;
+    left: -14px;
+}
+
+.main .task-input {
+    font-family: 'Nunito', sans-serif;
+    font-size: 16px;
+    border-radius: 8px;
+    outline: none;
+    border: 1px solid #e6e6e6;
+    padding: 8px 12px;
+}
+
+.addTask-btn {
+    background-color: rgb(114, 114, 255);
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-shadow: 0px 0px 5px rgb(95, 95, 95);
+    font-size: 16px;
+    border: 1px solid #62658b;
+    padding: 8px 12px;
+    outline: none;
+    transition: all .3s;
+    margin: 0 5px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .main .task-input{
+        width: 100%;
+        margin: 5px 0;
+    }
+    .addTask-btn {
+        width: 110%;
+        margin: 5px 0;
+    }
+}
+
+.addTask-btn:hover {
+    text-shadow: none;
+    background-color: azure;
+    color: #000;
+}
+
+.tasks {
+    border: 1px solid #62658b;
+    border-radius: 10px;
+    padding: 20px;
+    position: relative; /* Added positioning for absolute positioning of delete-all button */
+}
+.tasks > li {
+    position: relative;
+    left: -10px;
+    width: calc(100% - 20px);
+    margin: 10px;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f0f0f0; 
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); 
+}
+
+.tasks > li input {
+    width: calc(100% - 24px);
+    border: none;
+    outline: none;
+    font-size: 16px;
+    padding: 8px 12px;
+}
+
+@media (max-width: 768px) {
+    .tasks > li {
+        width: calc(100% - 20px);
+    }
+}
+.tasks > li button {
+margin: 0px 5px;
+}
+
+.delete-all {
+    font-family: 'Poppins', sans-serif;
+    position: absolute; /* Position absolute for the button */
+    top: -20px; /* Adjust top position as needed */
+    right: 30px; /* Adjust right position as needed */
+    padding: 8px 12px;
+    background-color: #ff0000;
+    outline: none;
+    font-size: 14px;
+    border-radius: 8px;
+    border: 1px solid #fff;
+    color: #fff;
+}
+
